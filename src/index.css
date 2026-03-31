@@ -15,11 +15,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 230 20% 20%;
 
-    --primary: 262 83% 58%;
+    --primary: 210 90% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --primary-light: 262 83% 68%;
-    --primary-dark: 262 83% 48%;
+    --primary-light: 210 80% 55%;
+    --primary-dark: 210 95% 30%;
 
     --secondary: 240 60% 96%;
     --secondary-foreground: 230 20% 20%;
