@@ -30,13 +30,6 @@ const AboutSection = () => {
             </ul>
           </div>
           <div className="relative">
-            <div className="w-full aspect-square bg-accent rounded-2xl flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl font-bold text-gradient mb-2">10+</div>
-                <p className="text-muted-foreground font-medium">Years of Experience</p>
-              </div>
-            </div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10" />
           </div>
         </div>
       </div>
