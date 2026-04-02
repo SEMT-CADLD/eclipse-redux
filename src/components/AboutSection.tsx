@@ -31,7 +31,7 @@ const AboutSection = () => {
           </div>
           <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-accent flex items-center justify-center">
             <img
-              src="/placeholder.svg"
+              src="/be15b946-0e47-4153-8fb5-7efa7947fc72.jpg"
               alt="About us"
               className="w-full h-full object-cover"
             />
