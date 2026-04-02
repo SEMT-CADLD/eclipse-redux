@@ -29,7 +29,12 @@ const AboutSection = () => {
               ))}
             </ul>
           </div>
-          <div className="relative">
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-accent flex items-center justify-center">
+            <img
+              src="/placeholder.svg"
+              alt="About us"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
