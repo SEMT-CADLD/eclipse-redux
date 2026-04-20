@@ -15,13 +15,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6 font-sans font-semibold">
               {headlineLine1}<br />{headlineLine2}
             </h1>
             <p className="text-primary-foreground/75 text-xl leading-relaxed max-w-md mb-8">
-              In the history of modern astronomy, there is probably no one greater
-              leap forward than the building and launch of the space telescope
-              known as the Hubble.
+              Delivering learning projects that drive professional development and channel growth.
             </p>
           </div>
           <div className="flex justify-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
