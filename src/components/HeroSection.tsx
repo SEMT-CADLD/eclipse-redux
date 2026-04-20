@@ -1,6 +1,9 @@
 import heroIllustration from "@/assets/hero-illustration.png";
+import { useState } from "react";
 
 const HeroSection = () => {
+  const [headlineLine1, setHeadlineLine1] = useState("Take the first step");
+  const [headlineLine2, setHeadlineLine2] = useState("to learn with us");
   return (
     <section className="relative bg-hero-gradient min-h-[90vh] flex items-center overflow-hidden">
       {/* Decorative circles */}
@@ -13,7 +16,7 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-              Take the first step<br />to learn with us
+              {headlineLine1}<br />{headlineLine2}
             </h1>
             <p className="text-primary-foreground/75 text-base md:text-lg leading-relaxed max-w-md mb-8">
               In the history of modern astronomy, there is probably no one greater
