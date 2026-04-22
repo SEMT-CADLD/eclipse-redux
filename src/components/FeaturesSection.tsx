@@ -3,18 +3,18 @@ import { BookOpen, Trophy, BookMarked } from "lucide-react";
 const features = [
   {
     icon: BookOpen,
-    title: "New Classes",
-    description: "In the history of modern astronomy, there is probably no one greater leap forward.",
+    title: "TBD",
+    description: "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.",
   },
   {
     icon: Trophy,
-    title: "Top Courses",
-    description: "In the history of modern astronomy, there is probably no one greater leap forward.",
+    title: "TBD",
+    description: "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.",
   },
   {
     icon: BookMarked,
-    title: "Full E-Books",
-    description: "In the history of modern astronomy, there is probably no one greater leap forward.",
+    title: "TBD",
+    description: "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.",
   },
 ];
 
@@ -25,7 +25,7 @@ const FeaturesSection = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
-              key={feature.title}
+              key={feature.title + index}
               className="flex gap-4 p-6 group animate-fade-in-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
@@ -33,8 +33,8 @@ const FeaturesSection = () => {
                 <feature.icon className="w-10 h-10 text-primary/40 group-hover:text-primary transition-colors" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg mb-2 font-semibold font-sans text-[#2576da]">{feature.title}</h3>
+                <p className="leading-relaxed text-base font-sans font-medium text-[#0c3e83]">{feature.description}</p>
               </div>
             </div>
           ))}

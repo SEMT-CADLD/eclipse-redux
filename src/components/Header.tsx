@@ -17,13 +17,13 @@ const Header = () => {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors uppercase tracking-wider"
+              className="font-medium transition-colors uppercase tracking-wider text-base text-[#031e45]"
             >
               {link}
             </a>
           ))}
           <button className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-            <Search className="w-4 h-4" />
+            <Search className="w-4 h-4 text-[#031e45]" />
           </button>
         </nav>
 
