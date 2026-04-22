@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6 font-sans font-semibold">
+            <h1 className="text-4xl md:text-5xl text-primary-foreground leading-tight mb-6 font-sans font-semibold lg:text-2xl">
               {headlineLine1}<br />{headlineLine2}
             </h1>
             <p className="text-primary-foreground/75 text-xl leading-relaxed max-w-md mb-8">
