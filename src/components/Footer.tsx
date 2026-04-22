@@ -26,9 +26,9 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold text-background mb-4">Courses</h4>
+            <h4 className="font-semibold text-background mb-4">Courses/Partners</h4>
             <ul className="space-y-2 text-sm">
-              {["Web Development", "UI/UX Design", "Data Science", "Marketing"].map((course) => (
+              {["Subject /Partner Link", "Subject /Partner Link", "Subject /Partner Link", "Subject /Partner Link"].map((course) => (
                 <li key={course}>
                   <a href="#courses" className="text-background/60 hover:text-background transition-colors">
                     {course}
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-background/10 mt-12 pt-8 text-center text-sm text-background/40">
-          © 2026 Eclipse. All rights reserved.
+          © 2026 Concepts and Design Learning Development. All rights reserved.
         </div>
       </div>
     </footer>
