@@ -1,7 +1,15 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const navLinks = ["HOME", "ABOUT", "COURSES", "PAGES", "BLOG", "CONTACTS"];
+const navLinks: { label: string; to: string }[] = [
+  { label: "HOME", to: "/" },
+  { label: "ABOUT", to: "/#about" },
+  { label: "COURSES", to: "/courses" },
+  { label: "PAGES", to: "/" },
+  { label: "BLOG", to: "/" },
+  { label: "CONTACTS", to: "/" },
+];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,13 +22,13 @@ const Header = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+            <Link
+              key={link.label}
+              to={link.to}
               className="font-medium transition-colors uppercase tracking-wider text-base text-[#031e45]"
             >
-              {link}
-            </a>
+              {link.label}
+            </Link>
           ))}
           <button className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
             <Search className="w-4 h-4 text-[#031e45]" />
@@ -44,14 +52,14 @@ const Header = () => {
       {mobileOpen && (
         <nav className="md:hidden bg-primary/95 backdrop-blur-sm px-4 pb-4">
           {navLinks.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+            <Link
+              key={link.label}
+              to={link.to}
               className="block py-2 text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground uppercase tracking-wider"
               onClick={() => setMobileOpen(false)}
             >
-              {link}
-            </a>
+              {link.label}
+            </Link>
           ))}
         </nav>
       )}
