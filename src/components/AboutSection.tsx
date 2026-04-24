@@ -6,13 +6,13 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="font-semibold uppercase tracking-widest mb-4 block text-lg text-[#2576da]">
+            <span className="font-semibold uppercase tracking-widest mb-4 block text-[#2576da] text-2xl font-sans">
               About Us
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-[#0c3e83]">
               ​Tagline that grabs attention ─
             </h2>
-            <p className="leading-relaxed mb-8 text-[#0c3e83]">
+            <p className="leading-relaxed mb-8 text-[#0c3e83] text-lg font-sans">
               The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
             </p>
             <ul className="space-y-3">
@@ -21,7 +21,7 @@ const AboutSection = () => {
                   <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
                     <Check className="w-3 h-3 text-primary-foreground" />
                   </div>
-                  <span className="text-sm">{item}</span>
+                  <span className="text-base font-sans">{item}</span>
                 </li>
               ))}
             </ul>

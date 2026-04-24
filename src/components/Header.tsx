@@ -25,7 +25,7 @@ const Header = () => {
             <Link
               key={link.label}
               to={link.to}
-              className="font-medium transition-colors uppercase tracking-wider text-base text-[#031e45]"
+              className="transition-colors uppercase tracking-wider text-[#031e45] font-semibold text-lg"
             >
               {link.label}
             </Link>
