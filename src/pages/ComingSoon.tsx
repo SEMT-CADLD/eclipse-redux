@@ -43,7 +43,7 @@ const ComingSoon = () => {
       <div className="absolute bottom-20 right-20 w-20 h-20 rounded-full border-2 border-primary-foreground/10" />
 
       <div className="relative z-10 w-full max-w-3xl text-center animate-fade-in-up">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-semibold leading-tight text-primary-foreground mb-10">
+        <h1 className="text-5xl md:text-7xl font-sans font-semibold leading-tight mb-10 text-[#0c3e83] lg:text-8xl">
           Coming Soon
         </h1>
 
