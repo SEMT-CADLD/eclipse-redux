@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Mail } from "lucide-react";
+import { Mail, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -54,9 +54,31 @@ const ComingSoon = () => {
           Coming Soon
         </h1>
 
-        <p className="text-lg font-medium text-primary-foreground/90 max-w-xl mx-auto mb-12 md:text-xl">
+        <p className="text-lg font-medium text-primary-foreground/90 max-w-xl mx-auto mb-8 md:text-xl">
           We're crafting something exceptional. In the meantime, follow us on other platforms or submit your email address below to join our mailing list for news and updates.
         </p>
+
+        {/* Social media links */}
+        <div className="flex items-center justify-center gap-4 mb-10">
+          {[
+            { Icon: Facebook, label: "Facebook", href: "#" },
+            { Icon: Instagram, label: "Instagram", href: "#" },
+            { Icon: Linkedin, label: "LinkedIn", href: "#" },
+            { Icon: Twitter, label: "Twitter / X", href: "#" },
+            { Icon: Youtube, label: "YouTube", href: "#" },
+          ].map(({ Icon, label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground flex items-center justify-center transition-colors"
+            >
+              <Icon className="w-5 h-5" />
+            </a>
+          ))}
+        </div>
 
         {/* Email signup */}
         <form
