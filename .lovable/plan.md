@@ -1,8 +1,14 @@
+## Swap Logo and "Coming Soon" Header Positions
 
+### Goal
+On the Coming Soon page, move the "Coming Soon" heading above the company logo (currently the logo is above the heading).
 
-## Update footer phone number
+### Changes
 
-Change the contact phone number in `src/components/Footer.tsx` (line 48) from `+1 234 567 890` to `+1 972 010 1010`.
+**File: `src/pages/ComingSoon.tsx`**
 
-No other changes.
+1. Move the `<h1>Coming Soon</h1>` block above the `<img>` logo block.
+2. Adjust bottom margin on the `<h1>` from `mb-6` to `mb-10` (since it now sits above the logo, it needs more breathing room).
+3. Adjust bottom margin on the `<img>` from `mb-10` to `mb-6` (since it now sits below the heading, less margin is needed before the paragraph).
 
+No other files are affected. The import path and logo asset remain unchanged.
