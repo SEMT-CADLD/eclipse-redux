@@ -54,8 +54,8 @@ const ComingSoon = () => {
           className="w-full max-w-md mx-auto h-auto object-contain mb-6"
         />
 
-        <p className="text-lg md:text-2xl font-medium text-primary-foreground/90 max-w-xl mx-auto mb-12">
-          We're crafting something exceptional. Our new learning experience launches shortly.
+        <p className="text-lg font-medium text-primary-foreground/90 max-w-xl mx-auto mb-12 md:text-xl">
+          We're crafting something exceptional. In the meantime, follow us on other platforms or submit your email address below to join our mailing list for news and updates.
         </p>
 
         {/* Email signup */}
