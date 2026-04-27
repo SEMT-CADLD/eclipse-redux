@@ -51,9 +51,6 @@ const ComingSoon = () => {
           </div>
         </div>
 
-        <p className="uppercase tracking-[0.3em] text-sm md:text-base font-semibold text-primary-foreground/80 mb-6">
-          Concepts and Design Learning Development
-        </p>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-semibold leading-tight text-primary-foreground mb-6">
           Coming Soon
