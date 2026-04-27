@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Mail, Image as ImageIcon } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import cadldLogo from "@/assets/cadld-logo.png";
 
 const ComingSoon = () => {
   const [email, setEmail] = useState("");
@@ -42,15 +43,12 @@ const ComingSoon = () => {
       <div className="absolute bottom-20 right-20 w-20 h-20 rounded-full border-2 border-primary-foreground/10" />
 
       <div className="relative z-10 w-full max-w-3xl text-center animate-fade-in-up">
-        {/* Logo placeholder */}
-        <div className="mx-auto mb-10 flex h-40 w-40 md:h-48 md:w-48 items-center justify-center rounded-2xl bg-primary-foreground/10 backdrop-blur-sm border-2 border-dashed border-primary-foreground/30">
-          {/* Replace this block with your <img src="/your-logo.svg" alt="Company logo" /> */}
-          <div className="flex flex-col items-center text-primary-foreground/60">
-            <ImageIcon className="w-10 h-10 mb-2" />
-            <span className="text-xs uppercase tracking-wider">Your Logo Here</span>
-          </div>
-        </div>
-
+        {/* Company logo */}
+        <img
+          src={cadldLogo}
+          alt="Concepts and Design Learning Development logo"
+          className="w-full max-w-md mx-auto h-auto object-contain mb-10"
+        />
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-semibold leading-tight text-primary-foreground mb-6">
           Coming Soon
