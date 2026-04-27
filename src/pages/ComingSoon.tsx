@@ -43,16 +43,16 @@ const ComingSoon = () => {
       <div className="absolute bottom-20 right-20 w-20 h-20 rounded-full border-2 border-primary-foreground/10" />
 
       <div className="relative z-10 w-full max-w-3xl text-center animate-fade-in-up">
-        <h1 className="text-5xl md:text-7xl font-sans font-semibold leading-tight mb-10 text-[#0c3e83] lg:text-8xl">
-          Coming Soon
-        </h1>
-
         {/* Company logo */}
         <img
           src={cadldLogo}
           alt="Concepts and Design Learning Development logo"
-          className="w-full max-w-md mx-auto h-auto object-contain mb-6"
+          className="w-full max-w-md mx-auto h-auto object-contain mb-10"
         />
+
+        <h1 className="text-5xl md:text-7xl font-sans font-semibold leading-tight mb-6 text-[#0c3e83] lg:text-8xl">
+          Coming Soon
+        </h1>
 
         <p className="text-lg font-medium text-primary-foreground/90 max-w-xl mx-auto mb-12 md:text-xl">
           We're crafting something exceptional. In the meantime, follow us on other platforms or submit your email address below to join our mailing list for news and updates.
