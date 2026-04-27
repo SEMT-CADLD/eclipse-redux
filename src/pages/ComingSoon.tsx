@@ -1,25 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
-import { Mail } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Mail, Image as ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 
-const LAUNCH_DATE = new Date();
-LAUNCH_DATE.setDate(LAUNCH_DATE.getDate() + 30);
-
-const getTimeLeft = () => {
-  const diff = LAUNCH_DATE.getTime() - Date.now();
-  const clamp = Math.max(diff, 0);
-  return {
-    days: Math.floor(clamp / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((clamp / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((clamp / (1000 * 60)) % 60),
-    seconds: Math.floor((clamp / 1000) % 60),
-  };
-};
-
 const ComingSoon = () => {
-  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
   const [email, setEmail] = useState("");
   const { toast } = useToast();
 
@@ -36,21 +21,6 @@ const ComingSoon = () => {
       document.head.appendChild(tag);
     }
   }, []);
-
-  useEffect(() => {
-    const id = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  const units = useMemo(
-    () => [
-      { label: "Days", value: timeLeft.days },
-      { label: "Hours", value: timeLeft.hours },
-      { label: "Minutes", value: timeLeft.minutes },
-      { label: "Seconds", value: timeLeft.seconds },
-    ],
-    [timeLeft],
-  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -72,6 +42,15 @@ const ComingSoon = () => {
       <div className="absolute bottom-20 right-20 w-20 h-20 rounded-full border-2 border-primary-foreground/10" />
 
       <div className="relative z-10 w-full max-w-3xl text-center animate-fade-in-up">
+        {/* Logo placeholder */}
+        <div className="mx-auto mb-10 flex h-40 w-40 md:h-48 md:w-48 items-center justify-center rounded-2xl bg-primary-foreground/10 backdrop-blur-sm border-2 border-dashed border-primary-foreground/30">
+          {/* Replace this block with your <img src="/your-logo.svg" alt="Company logo" /> */}
+          <div className="flex flex-col items-center text-primary-foreground/60">
+            <ImageIcon className="w-10 h-10 mb-2" />
+            <span className="text-xs uppercase tracking-wider">Your Logo Here</span>
+          </div>
+        </div>
+
         <p className="uppercase tracking-[0.3em] text-sm md:text-base font-semibold text-primary-foreground/80 mb-6">
           Concepts and Design Learning Development
         </p>
@@ -83,23 +62,6 @@ const ComingSoon = () => {
         <p className="text-lg md:text-2xl font-medium text-primary-foreground/90 max-w-xl mx-auto mb-12">
           We're crafting something exceptional. Our new learning experience launches shortly.
         </p>
-
-        {/* Countdown */}
-        <div className="grid grid-cols-4 gap-3 md:gap-6 max-w-2xl mx-auto mb-12">
-          {units.map((unit) => (
-            <div
-              key={unit.label}
-              className="rounded-xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/15 py-4 md:py-6"
-            >
-              <div className="text-3xl md:text-5xl font-bold text-primary-foreground tabular-nums">
-                {String(unit.value).padStart(2, "0")}
-              </div>
-              <div className="mt-1 text-xs md:text-sm uppercase tracking-wider text-primary-foreground/70">
-                {unit.label}
-              </div>
-            </div>
-          ))}
-        </div>
 
         {/* Email signup */}
         <form
