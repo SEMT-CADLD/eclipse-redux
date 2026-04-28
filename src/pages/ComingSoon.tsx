@@ -61,12 +61,12 @@ const ComingSoon = () => {
         {/* Social media links */}
         <div className="flex items-center justify-center gap-4 mb-10">
           {[
-            { Icon: Facebook, label: "Facebook", href: "#" },
-            { Icon: Instagram, label: "Instagram", href: "#" },
-            { Icon: Linkedin, label: "LinkedIn", href: "#" },
-            
-            { Icon: Youtube, label: "YouTube", href: "#" },
-          ].map(({ Icon, label, href }) => (
+            // Temporarily hidden — re-enable by setting hidden: false
+            { Icon: Facebook, label: "Facebook", href: "#", hidden: true },
+            { Icon: Instagram, label: "Instagram", href: "#", hidden: true },
+            { Icon: Linkedin, label: "LinkedIn", href: "#", hidden: false },
+            { Icon: Youtube, label: "YouTube", href: "#", hidden: true },
+          ].filter(({ hidden }) => !hidden).map(({ Icon, label, href }) => (
             <a
               key={label}
               href={href}
