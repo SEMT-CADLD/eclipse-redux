@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Mail, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Mail, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -64,7 +64,7 @@ const ComingSoon = () => {
             { Icon: Facebook, label: "Facebook", href: "#" },
             { Icon: Instagram, label: "Instagram", href: "#" },
             { Icon: Linkedin, label: "LinkedIn", href: "#" },
-            { Icon: Twitter, label: "Twitter / X", href: "#" },
+            
             { Icon: Youtube, label: "YouTube", href: "#" },
           ].map(({ Icon, label, href }) => (
             <a
