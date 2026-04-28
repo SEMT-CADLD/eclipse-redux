@@ -80,10 +80,10 @@ const ComingSoon = () => {
           ))}
         </div>
 
-        {/* Email signup */}
+        {/* Email signup — temporarily hidden */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+          className="hidden flex-col sm:flex-row gap-3 max-w-md mx-auto"
         >
           <div className="relative flex-1">
             <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
