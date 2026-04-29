@@ -79,9 +79,9 @@ const ComingSoon = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground flex items-center justify-center transition-colors opacity-100"
+              className="w-20 h-20 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground flex items-center justify-center transition-colors opacity-100"
             >
-              <Icon className="w-5 h-5" />
+              <Icon className="w-10 h-10" />
             </a>
           ))}
         </div>
