@@ -61,7 +61,13 @@ const ComingSoon = () => {
         </h1>
 
         <p className="text-lg font-medium text-primary-foreground/90 max-w-xl mx-auto mb-8 md:text-xl">
-          We're crafting something exceptional. In the meantime, follow us on LinkedIn for news and updates or email us directly at <a href="mailto:info@cadld.com" className="hover:underline">info@cadld.com</a>
+          We're crafting something exceptional. In the meantime, follow us on LinkedIn for news and updates or email us directly at{" "}
+          <a
+            href="mailto:info@cadld.com"
+            className="font-semibold underline underline-offset-4 text-primary-foreground hover:text-primary-foreground/80 transition-colors"
+          >
+            info@cadld.com
+          </a>
         </p>
 
         {/* Social media links */}
